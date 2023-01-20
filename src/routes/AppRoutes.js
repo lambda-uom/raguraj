@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AvailableUserRoles  from '../pages/AvailableUserRoles';
 import CreateUserRole from '../pages/CreateUserRole';
 import EditUserRole from '../pages/EditUserRole';
+import FurtherDetails from '../pages/FurtherDetails';
 import GoogleLogin from '../pages/GoogleLogin';
 import Home from '../pages/Home';
 import PromoteDemote from '../pages/PromoteDemote';
@@ -18,6 +19,7 @@ const AppRoutes = () => {
                 <Route exact path="/ShowUsersUnderRole/:userRole" element={<ShowUsersUnderRole/>} />
                 <Route exact path="/promoteDemoteUser/" element={<PromoteDemote></PromoteDemote>} />
                 <Route exact path="/googleLogin/" element={<GoogleLogin></GoogleLogin>} />
+                <Route exact path="/furtherdetails/" element={<FurtherDetails></FurtherDetails>} />
             </Routes>
         </BrowserRouter>
     );
