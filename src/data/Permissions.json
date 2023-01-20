@@ -1,0 +1,182 @@
+[
+    {
+     "id": 1,
+     "permission": "Attempt the final project assignment"
+    },
+    {
+     "id": 2,
+     "permission": "View Learning Chapters"
+    },
+    {
+     "id": 3,
+     "permission": "Check Profile Overview"
+    },
+    {
+     "id": 4,
+     "permission": "Attempt Quiz"
+    },
+    {
+     "id": 5,
+     "permission": "Create, Edit, Delete Quizzes"
+    },
+    {
+     "id": 6,
+     "permission": "Complete Guidance Request Tickets"
+    },
+    {
+     "id": 7,
+     "permission": "Raise Guidance Request Ticket"
+    },
+    {
+     "id": 8,
+     "permission": "Direct Guidance Request Ticket"
+    },
+    {
+     "id": 9,
+     "permission": "Create Learning Materials"
+    },
+    {
+     "id": 10,
+     "permission": "View Created Learning Materials by that User"
+    },
+    {
+     "id": 11,
+     "permission": "Edit  Learning Materials"
+    },
+    {
+     "id": 12,
+     "permission": "Delete  Learning Materials"
+    },
+    {
+     "id": 13,
+     "permission": "Upload  Learning Materials"
+    },
+    {
+     "id": 14,
+     "permission": "View Discussion Forums, Posts and Replies"
+    },
+    {
+     "id": 15,
+     "permission": "Create, Edit, Lock Discussion Forum"
+    },
+    {
+     "id": 16,
+     "permission": "Post or Reply on Discussion forum "
+    },
+    {
+     "id": 17,
+     "permission": "Rate on Learning Materials"
+    },
+    {
+     "id": 18,
+     "permission": "View Ratings on Learning Materials"
+    },
+    {
+     "id": 19,
+     "permission": "Comment or Replying on Learning Materials"
+    },
+    {
+     "id": 20,
+     "permission": "View Comments and Replies on Learning Materials"
+    },
+    {
+     "id": 21,
+     "permission": "Evaluate Final Project Assignment of Hired Employee"
+    },
+    {
+     "id": 22,
+     "permission": "Create Chapter"
+    },
+    {
+     "id": 23,
+     "permission": "Edit Chapter"
+    },
+    {
+     "id": 24,
+     "permission": "Temporary Delete Chapter"
+    },
+    {
+     "id": 25,
+     "permission": "Create common chapters"
+    },
+    {
+     "id": 26,
+     "permission": "View Chapters"
+    },
+    {
+     "id": 27,
+     "permission": "Delete Chapters Permanently"
+    },
+    {
+     "id": 28,
+     "permission": "Request for additional chapters"
+    },
+    {
+     "id": 29,
+     "permission": "Give permissions to additional chapters"
+    },
+    {
+     "id": 30,
+     "permission": "Assign default chapters to Job title"
+    },
+    {
+     "id": 31,
+     "permission": "Edit default Chapters of each job title"
+    },
+    {
+     "id": 32,
+     "permission": "Allow and Verify designations of the User"
+    },
+    {
+     "id": 33,
+     "permission": "Promote Employee to Supervisor"
+    },
+    {
+     "id": 34,
+     "permission": "Create User Roles"
+    },
+    {
+     "id": 35,
+     "permission": "Edit User Roles"
+    },
+    {
+     "id": 36,
+     "permission": "Delete User Roles"
+    },
+    {
+     "id": 37,
+     "permission": "View User Roles"
+    },
+    {
+     "id": 38,
+     "permission": "Create Department"
+    },
+    {
+     "id": 39,
+     "permission": "Edit Department"
+    },
+    {
+     "id": 40,
+     "permission": "Delete Department"
+    },
+    {
+     "id": 41,
+     "permission": "View Department"
+    },
+    {
+     "id": 42,
+     "permission": "Create Job Title"
+    },
+    {
+     "id": 43,
+     "permission": "Edit Job Title"
+    },
+    {
+     "id": 44,
+     "permission": "Delete Job Title"
+    },
+    {
+     "id": 45,
+     "permission": "View Job Title"
+    }
+   ]
