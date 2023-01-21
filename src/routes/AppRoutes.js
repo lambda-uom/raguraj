@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AvailableUserRoles  from '../pages/AvailableUserRoles';
 import CreateUserRole from '../pages/CreateUserRole';
+import HiredEmployee from '../pages/Dashboard/HiredEmployee';
 import EditUserRole from '../pages/EditUserRole';
 import FurtherDetails from '../pages/FurtherDetails';
 import GoogleLogin from '../pages/GoogleLogin';
@@ -22,6 +23,7 @@ const AppRoutes = () => {
                 <Route exact path="/googleLogin/" element={<GoogleLogin></GoogleLogin>} />
                 <Route exact path="/furtherdetails/" element={<FurtherDetails></FurtherDetails>} />
                 <Route exact path="/pendingrequests/" element={<PendingUserApproval></PendingUserApproval>} />
+                <Route exact path="/hiredemployee/" element={<HiredEmployee></HiredEmployee>} />
             </Routes>
         </BrowserRouter>
     );
