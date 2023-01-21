@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AvailableUserRoles  from '../pages/AvailableUserRoles';
 import CreateUserRole from '../pages/CreateUserRole';
 import HiredEmployee from '../pages/Dashboard/HiredEmployee';
+import HiredEmployee2 from '../pages/Dashboard/HiredEmployee2';
 import EditUserRole from '../pages/EditUserRole';
 import FurtherDetails from '../pages/FurtherDetails';
 import GoogleLogin from '../pages/GoogleLogin';
@@ -24,6 +25,7 @@ const AppRoutes = () => {
                 <Route exact path="/furtherdetails/" element={<FurtherDetails></FurtherDetails>} />
                 <Route exact path="/pendingrequests/" element={<PendingUserApproval></PendingUserApproval>} />
                 <Route exact path="/hiredemployee/" element={<HiredEmployee></HiredEmployee>} />
+                <Route exact path="/hiredemployee2/" element={<HiredEmployee2></HiredEmployee2>} />
             </Routes>
         </BrowserRouter>
     );

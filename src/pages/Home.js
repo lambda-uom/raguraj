@@ -76,7 +76,23 @@ const Home = () => {
                                     Pending Login Approvals
                                 </Link>
                             </td>
-                            <td>Super Admin</td>
+                            <td>System Admin</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <Link to="hiredemployee">
+                                    Hired Employee Dashboard
+                                </Link>
+                            </td>
+                            <td>Hired Employee</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <Link to="hiredemployee2">
+                                    Hired Employee Dashboard - Final Project assignment request
+                                </Link>
+                            </td>
+                            <td>Hired Employee</td>
                         </tr>
                     </tbody>
                 </table>
