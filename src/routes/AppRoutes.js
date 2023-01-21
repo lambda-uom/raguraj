@@ -6,6 +6,7 @@ import EditUserRole from '../pages/EditUserRole';
 import FurtherDetails from '../pages/FurtherDetails';
 import GoogleLogin from '../pages/GoogleLogin';
 import Home from '../pages/Home';
+import PendingUserApproval from '../pages/PendingUserApproval';
 import PromoteDemote from '../pages/PromoteDemote';
 import ShowUsersUnderRole from '../pages/SHowUsersUnderRole';
 const AppRoutes = () => {
@@ -20,6 +21,7 @@ const AppRoutes = () => {
                 <Route exact path="/promoteDemoteUser/" element={<PromoteDemote></PromoteDemote>} />
                 <Route exact path="/googleLogin/" element={<GoogleLogin></GoogleLogin>} />
                 <Route exact path="/furtherdetails/" element={<FurtherDetails></FurtherDetails>} />
+                <Route exact path="/pendingrequests/" element={<PendingUserApproval></PendingUserApproval>} />
             </Routes>
         </BrowserRouter>
     );
