@@ -33,7 +33,7 @@ const Home = () => {
                         <tr>
                             <td>
                                 <Link to="availableuserroles">
-                                    Available User Roles
+                                    Manage Available User Roles
                                 </Link>
                             </td>
                             <td>Super Admin</td>
@@ -41,7 +41,7 @@ const Home = () => {
                         <tr>
                             <td>
                                 <Link to="createUserRole">
-                                    Create User Role
+                                    ➡ Create User Role
                                 </Link>
                             </td>
                             <td>Super Admin</td>
@@ -49,7 +49,7 @@ const Home = () => {
                         <tr>
                             <td>
                                 <Link to="editUserRole/Moderator">
-                                    Edit User Role - Moderator
+                                ➡ Edit User Role - Moderator
                                 </Link>
                             </td>
                             <td>Super Admin</td>
@@ -57,7 +57,7 @@ const Home = () => {
                         <tr>
                             <td>
                                 <Link to="ShowUsersUnderRole/Moderator">
-                                    Show Users Under Role - Moderator
+                                ➡ Show Users Under Role - Moderator
                                 </Link>
                             </td>
                             <td>Super Admin</td>
@@ -66,6 +66,14 @@ const Home = () => {
                             <td>
                                 <Link to="promoteDemoteUser">
                                     Promote or Demote the User
+                                </Link>
+                            </td>
+                            <td>Super Admin</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <Link to="pendingrequests">
+                                    Pending Login Approvals
                                 </Link>
                             </td>
                             <td>Super Admin</td>
