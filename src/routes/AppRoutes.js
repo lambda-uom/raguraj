@@ -16,6 +16,7 @@ const AppRoutes = () => {
         <BrowserRouter>
             <Routes>
                 <Route exact path="/" element={<Home></Home>} />
+                <Route exact path="/home" element={<Home></Home>} />
                 <Route exact path="/availableuserroles" element={<AvailableUserRoles/>} />
                 <Route exact path="/createUserRole" element={<CreateUserRole/>} />
                 <Route exact path="/editUserRole/:userRole" element={<EditUserRole/>} />
