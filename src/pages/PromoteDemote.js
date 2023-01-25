@@ -17,7 +17,7 @@ const PromoteDemote = () => {
                     {
                         userroles.map((item) => {
                             return (
-                                <option value={item.value} key={item.id}>{item.value}</option>
+                                (item.value === "Super Admin")?null:<option value={item.value} key={item.id}>{item.value}</option>
                             );
                         })
                     }
