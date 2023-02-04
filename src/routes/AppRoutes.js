@@ -23,7 +23,6 @@ const AppRoutes = () => {
                 <Route exact path="/ShowUsersUnderRole/:userRole" element={<ShowUsersUnderRole/>} />
                 <Route exact path="/promoteDemoteUser/" element={<PromoteDemote></PromoteDemote>} />
                 <Route exact path="/googleLogin/" element={<GoogleLogin></GoogleLogin>} />
-                <Route exact path="/furtherdetails/" element={<FurtherDetails></FurtherDetails>} />
                 <Route exact path="/pendingrequests/" element={<PendingUserApproval></PendingUserApproval>} />
                 <Route exact path="/hiredemployee/" element={<HiredEmployee></HiredEmployee>} />
                 <Route exact path="/hiredemployee2/" element={<HiredEmployee2></HiredEmployee2>} />

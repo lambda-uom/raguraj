@@ -32,3 +32,7 @@
 .button {
   animation: glowing 1300ms infinite;
 }
+
+.text-danager{
+  color: rgb(22, 117, 224)!important;
+}
