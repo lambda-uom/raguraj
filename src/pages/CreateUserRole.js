@@ -20,9 +20,9 @@ const CreateUserRole = () => {
                             {
                                 perimssions.map((item) => {
                                     return (
-                                        <div class="form-check mt-1 col-md-4">
-                                            <input class="form-check-input" type="checkbox" id={`p` + item.id}></input>
-                                            <label class="form-check-label">
+                                        <div className="form-check mt-1 col-md-4">
+                                            <input className="form-check-input" type="checkbox" id={`p` + item.id}></input>
+                                            <label className="form-check-label">
                                                 {item.permission}
                                             </label>
                                         </div>

@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import swal from 'sweetalert'
 const FurtherDetails = (props) => {
-    const [firstName, setFirstName] = useState(props.fname);
-    const [lastName, setLastName] = useState(props.lname);
+    const [firstName, setFirstName] = useState(props.userData.given_name);
+    const [lastName, setLastName] = useState(props.userData.family_name);
     const [gender, setGender] = useState("NA");
     const [dob, setDob] = useState();
     const [phone, setPhone] = useState();
-    const [email, setEmail] = useState(props.email);
+    const [email, setEmail] = useState(props.userData.email);
     const [department, setDepartment] = useState();
     const [jobTitle, setJobTitle] = useState();
     const [submitStatus, setSubmitStatus] = useState();
@@ -16,6 +16,7 @@ const FurtherDetails = (props) => {
         if (submitStatus === "success") {
             swal("Good job!", submitMessage, "success")
             setSubmitStatus();
+            window.location.reload();
         } else if (submitStatus === "duplicate") {
             swal("Warning", submitMessage, "warning")
             setSubmitStatus();
@@ -51,7 +52,7 @@ const FurtherDetails = (props) => {
                 <div className="card shadow shadow-lg" >
                     <div className="card-header bg-dark ">
                         <center>
-                            <img draggable={false} alt="userImage" src={localStorage.getItem("userProfileImage")} className=" p-3 rounded-circle"></img>
+                            <img draggable={false} alt="userImage" src={props.userData.picture} className=" p-3 rounded-circle"></img>
                         </center>
                     </div>
                     <form onSubmit={submitFurtherDetails}>

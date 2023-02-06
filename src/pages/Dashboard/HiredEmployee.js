@@ -7,16 +7,16 @@ const HiredEmployee = () => {
         <React.Fragment>
             <NavBar></NavBar>
             <div className="container">
-                <div class="card mt-5">
+                <div className="card mt-5">
                     <nav>
-                        <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
-                            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">My Chapters</button>
-                            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Request Additional Chapters</button>
-                            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Guidance Ticket Request</button>
+                        <div className="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+                            <button className="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">My Chapters</button>
+                            <button className="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Request Additional Chapters</button>
+                            <button className="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Guidance Ticket Request</button>
                         </div>
                     </nav>
-                    <div class="tab-content p-3 border bg-light" id="nav-tabContent">
-                        <div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div className="tab-content p-3 border bg-light" id="nav-tabContent">
+                        <div className="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                             {
                                 Chapters.map((item) => {
                                     return (
@@ -36,7 +36,7 @@ const HiredEmployee = () => {
                                 Request Final Project Assignment | Locked. Complete the chapters first
                             </Link>
                         </div>
-                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        <div className="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                             {
                                 Chapters.map((item) => {
                                     return (
@@ -67,7 +67,7 @@ const HiredEmployee = () => {
                                 })
                             }
                         </div>
-                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                        <div className="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                             <h5>Guidance Request Ticket Component Here...</h5>
                         </div>
                     </div>

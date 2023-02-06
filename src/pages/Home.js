@@ -5,7 +5,8 @@ const Home = () => {
     return (
         <React.Fragment>
             <NavBar></NavBar>
-            <div className="container mt-5">
+            <div className="contai
+            ner mt-5">
                 <table className="table table-hover">
                     <thead>
                         <tr>
@@ -16,15 +17,15 @@ const Home = () => {
                     <tbody>
                         <tr>
                             <td>
-                                <Link to="googleLogin">
-                                    GoogleLogin
+                                <Link to="/login">
+                                    Login
                                 </Link>
                             </td>
                             <td>All Users</td>
                         </tr>
                         <tr>
                             <td>
-                                <Link to="furtherdetails">
+                                <Link to="/furtherdetails">
                                     Enter Further Details
                                 </Link>
                             </td>
@@ -32,7 +33,7 @@ const Home = () => {
                         </tr>
                         <tr>
                             <td>
-                                <Link to="availableuserroles">
+                                <Link to="/availableuserroles">
                                     Manage Available User Roles
                                 </Link>
                             </td>
@@ -40,7 +41,7 @@ const Home = () => {
                         </tr>
                         <tr>
                             <td>
-                                <Link to="createUserRole">
+                                <Link to="/createUserRole">
                                     ➡ Create User Role
                                 </Link>
                             </td>
@@ -48,7 +49,7 @@ const Home = () => {
                         </tr>
                         <tr>
                             <td>
-                                <Link to="editUserRole/Moderator">
+                                <Link to="/editUserRole/Moderator">
                                 ➡ Edit User Role - Moderator
                                 </Link>
                             </td>
@@ -56,7 +57,7 @@ const Home = () => {
                         </tr>
                         <tr>
                             <td>
-                                <Link to="ShowUsersUnderRole/Moderator">
+                                <Link to="/ShowUsersUnderRole/Moderator">
                                 ➡ Show Users Under Role - Moderator
                                 </Link>
                             </td>
@@ -64,7 +65,7 @@ const Home = () => {
                         </tr>
                         <tr>
                             <td>
-                                <Link to="promoteDemoteUser">
+                                <Link to="/promoteDemoteUser">
                                     Promote or Demote the User
                                 </Link>
                             </td>
@@ -72,7 +73,7 @@ const Home = () => {
                         </tr>
                         <tr>
                             <td>
-                                <Link to="pendingrequests">
+                                <Link to="/pendingrequests">
                                     Pending Login Approvals
                                 </Link>
                             </td>
@@ -80,7 +81,7 @@ const Home = () => {
                         </tr>
                         <tr>
                             <td>
-                                <Link to="hiredemployee">
+                                <Link to="/hiredemployee">
                                     Hired Employee Dashboard
                                 </Link>
                             </td>
@@ -88,7 +89,7 @@ const Home = () => {
                         </tr>
                         <tr>
                             <td>
-                                <Link to="hiredemployee2">
+                                <Link to="/hiredemployee2">
                                     Hired Employee Dashboard - Final Project assignment request
                                 </Link>
                             </td>
