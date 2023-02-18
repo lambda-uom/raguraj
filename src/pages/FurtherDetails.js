@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import swal from 'sweetalert'
 const FurtherDetails = (props) => {
-    const [firstName, setFirstName] = useState(props.userData.given_name);
-    const [lastName, setLastName] = useState(props.userData.family_name);
+    // console.log("object")
+    const [firstName] = useState(props.userData.given_name);
+    const [lastName] = useState(props.userData.family_name);
     const [gender, setGender] = useState("NA");
     const [dob, setDob] = useState();
     const [phone, setPhone] = useState();
-    const [email, setEmail] = useState(props.userData.email);
+    const [email] = useState(props.userData.email);
     const [department, setDepartment] = useState();
     const [jobTitle, setJobTitle] = useState();
     const [submitStatus, setSubmitStatus] = useState();
@@ -16,6 +17,7 @@ const FurtherDetails = (props) => {
         if (submitStatus === "success") {
             swal("Good job!", submitMessage, "success")
             setSubmitStatus();
+            localStorage.setItem("user", JSON.stringify(props.loginData?.user));
             window.location.reload();
         } else if (submitStatus === "duplicate") {
             swal("Warning", submitMessage, "warning")
@@ -142,7 +144,7 @@ const FurtherDetails = (props) => {
                                             value={email}
                                             id="email"
                                             disabled
-                                            // onChange={e => setEmail(e.target.value)}
+                                        // onChange={e => setEmail(e.target.value)}
                                         >
                                         </input>
                                         <label for="email">Email Address</label>
