@@ -200,22 +200,3 @@ const FurtherDetails = (props) => {
     );
 }
 export default FurtherDetails;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
