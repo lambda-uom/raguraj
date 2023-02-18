@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import NavBar from "../components/NavBar";
 const Home = () => {
+    // useEffect(() => {
+    //     const theUser=JSON.parse(localStorage.getItem("user"));
+    //     fetch("http://localhost:1337/authentication/checkTokenValidity", {
+    //         method: "POST",
+    //         headers: { "Content-Type": "application/json", },
+    //         body: JSON.stringify({ authorization: theUser.token }),
+    //     }).then((res) => {
+    //         return res.json();
+    //     }).then((data) => {
+    //         console.log(data)
+    //         // throw new Error(data?.message || data);
+    //     }).catch((error) => {
+    //         console.log(error?.message);
+    //     });
+    // });
     return (
         <React.Fragment>
             <NavBar></NavBar>
-            <div className="contai
-            ner mt-5">
+            <div className="container mt-5">
                 <table className="table table-hover">
                     <thead>
                         <tr>
@@ -50,7 +64,7 @@ const Home = () => {
                         <tr>
                             <td>
                                 <Link to="/editUserRole/Moderator">
-                                ➡ Edit User Role - Moderator
+                                    ➡ Edit User Role - Moderator
                                 </Link>
                             </td>
                             <td>Super Admin</td>
@@ -58,7 +72,7 @@ const Home = () => {
                         <tr>
                             <td>
                                 <Link to="/ShowUsersUnderRole/Moderator">
-                                ➡ Show Users Under Role - Moderator
+                                    ➡ Show Users Under Role - Moderator
                                 </Link>
                             </td>
                             <td>Super Admin</td>
