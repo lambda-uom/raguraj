@@ -1,11 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../css/Nav.css"
+import RenderIfLoggedIn from "../utils/RenderIfLoggedIn";
 const NavBar = () => {
+    const navigate = useNavigate();
     const logout = () => {
         localStorage.removeItem("user");
-        window.location.reload();
+        navigate("/login",{replace: true});
     };
+    window.addEventListener("storage", (event) => {
+        if (event.key === "user" && event.newValue === null) {
+          logout();
+        }
+      });      
     return (
         <React.Fragment>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -25,17 +32,20 @@ const NavBar = () => {
                             <li className="nav-item rounded">
                                 <Link className="nav-link active" to="#"><i className="bi bi-telephone-fill me-2"></i>Contact</Link>
                             </li>
-                            <li className="nav-item dropdown rounded">
-                                <Link className="nav-link active dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i className="bi bi-person-fill me-2"></i>Profile</Link>
-                                <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <li><Link className="dropdown-item" to="#"><i className="bi bi-person-lines-fill me-2"></i> Account</Link></li>
-                                    {/* <li><Link className="dropdown-item" to="#">Another action</Link></li> */}
-                                    <li>
-                                        <hr className="dropdown-divider" />
-                                    </li>
-                                    <li><button className="dropdown-item" onClick={logout}><i className="bi bi-box-arrow-right me-2"></i> Logout</button></li>
-                                </ul>
-                            </li>
+                            <RenderIfLoggedIn>
+                                <li className="nav-item dropdown rounded">
+                                    <Link className="nav-link active dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i className="bi bi-person-fill me-2"></i>Profile</Link>
+                                    <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                        <li><Link className="dropdown-item" to="#"><i className="bi bi-person-lines-fill me-2"></i> Account</Link></li>
+                                        {/* <li><Link className="dropdown-item" to="#">Another action</Link></li> */}
+                                        <li>
+                                            <hr className="dropdown-divider" />
+                                        </li>
+                                        <li><button className="dropdown-item" onClick={logout}><i className="bi bi-box-arrow-right me-2"></i> Logout</button></li>
+                                    </ul>
+                                </li>
+                            </RenderIfLoggedIn>
+
                         </ul>
                     </div>
                 </div>
