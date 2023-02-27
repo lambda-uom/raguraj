@@ -23,7 +23,7 @@ const HiredEmployee2 = () => {
                             <button className="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Guidance Ticket Request</button>
                         </div>
                     </nav>
-                    <div className="tab-content p-3 border bg-light" id="nav-tabContent">
+                    <div className="tab-content p-3 border" id="nav-tabContent">
                         <div className="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                             {
                                 Chapters.map((item) => {

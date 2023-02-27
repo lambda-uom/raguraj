@@ -1,22 +1,20 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import NavBar from "../components/NavBar";
+// import Darkmode from 'darkmode-js';
 const Home = () => {
-    // useEffect(() => {
-    //     const theUser=JSON.parse(localStorage.getItem("user"));
-    //     fetch("http://localhost:1337/authentication/checkTokenValidity", {
-    //         method: "POST",
-    //         headers: { "Content-Type": "application/json", },
-    //         body: JSON.stringify({ authorization: theUser.token }),
-    //     }).then((res) => {
-    //         return res.json();
-    //     }).then((data) => {
-    //         console.log(data)
-    //         // throw new Error(data?.message || data);
-    //     }).catch((error) => {
-    //         console.log(error?.message);
-    //     });
-    // });
+    // const options = {
+    //     mixColor: '#fff', // default: '#fff'
+    //     backgroundColor: '#fff',  // default: '#fff'
+    //     buttonColorDark: '#100f2c',  // default: '#100f2c'
+    //     buttonColorLight: '#fff', // default: '#fff'
+    //     saveInCookies: false, // default: true,
+    //     label: '🌓', // default: ''
+    //     autoMatchOsTheme: true // default: true
+    // }
+
+    // const darkmode = new Darkmode(options);
+    // darkmode.showWidget();
     return (
         <React.Fragment>
             <NavBar></NavBar>
@@ -37,7 +35,7 @@ const Home = () => {
                             </td>
                             <td>All Users</td>
                         </tr>
-                        
+
                         <tr>
                             <td>
                                 <Link to="/availableuserroles">
