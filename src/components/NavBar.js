@@ -12,13 +12,13 @@ const NavBar = () => {
     };
 
     // Un comment this if you want to logout the app from all tabs and windows
-    // window.addEventListener("storage", (event) => {
-    //     if (event.key === "user" && event.newValue === null) {
-    //         logout();
-    //         swal("Logged Out!", "Sorry, NETS App is Logged out in another Tab or Window", "warning");
-    //     }
-    // });
-    
+    window.addEventListener("storage", (event) => {
+        if (event.key === "user" && event.newValue === null) {
+            logout();
+            swal("Logged Out!", "Sorry, NETS App is Logged out in another Tab or Window", "warning");
+        }
+    });
+
     return (
         <React.Fragment>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -40,7 +40,11 @@ const NavBar = () => {
                             </li>
                             <RenderIfLoggedIn>
                                 <li className="nav-item dropdown rounded">
-                                    <Link className="nav-link active dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i className="bi bi-person-fill me-2"></i>Profile</Link>
+                                    <Link className="nav-link active dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i className="me-2">
+                                            <img className="rounded-circle" width={30} height={30} src={JSON.parse(localStorage.getItem("user"))?.picture} alt="userProfile"></img>
+                                        </i>
+                                    </Link>
                                     <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                         <li><Link className="dropdown-item" to="#"><i className="bi bi-person-lines-fill me-2"></i> Account</Link></li>
                                         {/* <li><Link className="dropdown-item" to="#">Another action</Link></li> */}

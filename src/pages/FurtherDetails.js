@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import swal from 'sweetalert'
+import { useNavigate } from "react-router-dom";
 const FurtherDetails = (props) => {
+    const navigate = useNavigate();
     // console.log("object")
     const [firstName] = useState(props.userData.given_name);
     const [lastName] = useState(props.userData.family_name);
@@ -11,22 +13,6 @@ const FurtherDetails = (props) => {
     const [email] = useState(props.userData.email);
     const [department, setDepartment] = useState();
     const [jobTitle, setJobTitle] = useState();
-    const [submitStatus, setSubmitStatus] = useState();
-    const [submitMessage, setSubmitMessage] = useState();
-    useEffect(() => {
-        if (submitStatus === "success") {
-            swal("Good job!", submitMessage, "success")
-            setSubmitStatus();
-            localStorage.setItem("user", JSON.stringify(props.loginData?.user));
-            window.location.reload();
-        } else if (submitStatus === "duplicate") {
-            swal("Warning", submitMessage, "warning")
-            setSubmitStatus();
-        } else if (submitStatus === false) {
-            swal("Error", "Error saving data to the database", "error")
-            setSubmitStatus();
-        }
-    }, [submitStatus, submitMessage])
     const submitFurtherDetails = (e) => {
         e.preventDefault();
         const postData = {
@@ -41,10 +27,16 @@ const FurtherDetails = (props) => {
         }
         axios.post('http://localhost:1337/authentication/addFurtherDetails', postData)
             .then((res) => {
-                setSubmitStatus(res.data.status);
-                setSubmitMessage(res.data.message);
+                if (res.data.status === "success") {
+                    swal("Good job!", res.data.message, "success")
+                    localStorage.setItem("user", JSON.stringify(props.loginData?.user));
+                    navigate("/home")
+                    // window.location.reload();
+                } else if (res.data.status === "duplicate") {
+                    swal("Warning", res.data.message, "warning")
+                }
             }).catch((error) => {
-                setSubmitStatus(false);
+                swal("Error", "Error saving data to the database", "error");
             });
 
     }

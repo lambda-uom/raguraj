@@ -37,14 +37,7 @@ const Home = () => {
                             </td>
                             <td>All Users</td>
                         </tr>
-                        <tr>
-                            <td>
-                                <Link to="/furtherdetails">
-                                    Enter Further Details
-                                </Link>
-                            </td>
-                            <td>All Users</td>
-                        </tr>
+                        
                         <tr>
                             <td>
                                 <Link to="/availableuserroles">
