@@ -1,18 +1,24 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../css/Nav.css"
+import swal from 'sweetalert';
 import RenderIfLoggedIn from "../utils/RenderIfLoggedIn";
+
 const NavBar = () => {
     const navigate = useNavigate();
     const logout = () => {
         localStorage.removeItem("user");
-        navigate("/login",{replace: true});
+        navigate("/login", { replace: true });
     };
-    window.addEventListener("storage", (event) => {
-        if (event.key === "user" && event.newValue === null) {
-          logout();
-        }
-      });      
+
+    // Un comment this if you want to logout the app from all tabs and windows
+    // window.addEventListener("storage", (event) => {
+    //     if (event.key === "user" && event.newValue === null) {
+    //         logout();
+    //         swal("Logged Out!", "Sorry, NETS App is Logged out in another Tab or Window", "warning");
+    //     }
+    // });
+    
     return (
         <React.Fragment>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -53,4 +59,5 @@ const NavBar = () => {
         </React.Fragment>
     );
 }
+
 export default NavBar;

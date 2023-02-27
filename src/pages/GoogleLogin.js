@@ -61,7 +61,7 @@ const GoogleLogin = () => {
                     console.log(error)
                 });
         }
-    }, [loginData, navigate])
+    }, [loginData, navigate, redirectPath])
 
     //render google login button
     useEffect(() => {
@@ -77,22 +77,23 @@ const GoogleLogin = () => {
             text: "continue_with",
             shape: "square",
         });
+        google.accounts.id.prompt();
     }, []);
 
     return (
         <React.Fragment>
             <div id="infoSection" style={{"userSelect":"none"}}>
-                <div class="px-4 py-5 my-5 text-center" >
-                    <img class="d-block mx-auto mb-4" draggable={false} src={image1} alt="hello world" width="200" height="200" />
-                    <h6 class="display-6 fw-bold">New Employee Training System</h6>
-                    <div class="col-lg-6 mx-auto">
-                        <p class="lead mb-4"  >
+                <div className="px-4 py-5 my-5 text-center" >
+                    <img className="d-block mx-auto mb-4" draggable={false} src={image1} alt="hello world" width="200" height="200" />
+                    <h6 className="display-6 fw-bold">New Employee Training System</h6>
+                    <div className="col-lg-6 mx-auto">
+                        <p className="lead mb-4"  >
                             New Employee Training System (NETS) is designed to provide knowledge
                             about working environment, procedures, what exactly newly hired employees
                             need to do in their particular job position in an efficient and interesting
                             manner by organizing all essential learning materials in one central location.
                         </p>
-                        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                        <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
                             {
                                 (isUserAvailable === false) ? null : <div id="loginDiv"></div>
                             }
@@ -100,13 +101,13 @@ const GoogleLogin = () => {
                     </div>
                 </div>
 
-                <div class="b-example-divider"></div>
+                <div className="b-example-divider"></div>
 
-                <div class="container my-5">
-                    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
-                        <div class="col-lg-6 p-3 p-lg-5 pt-lg-3">
-                            <h1 class="display-6 fw-bold lh-1">About NETS...</h1>
-                            <p class="lead">
+                <div className="container my-5">
+                    <div className="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+                        <div className="col-lg-6 p-3 p-lg-5 pt-lg-3">
+                            <h1 className="display-6 fw-bold lh-1">About NETS...</h1>
+                            <p className="lead">
                                 Introducing our all-in-one website dedicated to managing your learning materials,
                                 from KT sessions to articles and quizzes. Our platform is designed to help
                                 you stay on top of your educational needs and connect with like-minded
@@ -115,13 +116,13 @@ const GoogleLogin = () => {
                                 is why we have a guidance request ticket system in place for personalized
                                 support and guidance from our expert team.
                             </p>
-                            <div class="b-example-divider"></div>
-                            <p class="lead">
+                            <div className="b-example-divider"></div>
+                            <p className="lead">
                                 Join our community today and let's embark on a journey of lifelong learning together!
                             </p>
                         </div>
-                        <div class="col-lg-5 offset-lg-1 p-0 overflow-hidden shadow-lg">
-                            <img class="rounded-lg-3" draggable={false} src={image2} alt="" width="720" />
+                        <div className="col-lg-5 offset-lg-1 p-0 overflow-hidden shadow-lg">
+                            <img className="rounded-lg-3" draggable={false} src={image2} alt="" width="720" />
                         </div>
                     </div>
                 </div>
