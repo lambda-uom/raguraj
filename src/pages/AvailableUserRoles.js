@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 import "../App.css"
 import { Link } from "react-router-dom";
-import userroles from "../data/UserRoles.json";
+import axios from "axios"
 const AvailableUserRoles = () => {
+    const [userRoles, setUserRoles] = useState();
+    useEffect(() => {
+        axios
+            .get("http://localhost:1337/userRoles/showAllUserRoles")
+            .then(function (response) {
+                setUserRoles(response.data);
+            });
+    }, [])
     return (
         <React.Fragment>
             <NavBar></NavBar>
@@ -25,17 +33,17 @@ const AvailableUserRoles = () => {
                     </thead>
                     <tbody className="text-center">
                         {
-                            userroles.map((item) => {
+                            userRoles?.map((item) => {
                                 return (
                                     <tr>
-                                        <th scope="row">{item.id}</th>
-                                        <td>{item.value}</td>
-                                        <td>{item.count}</td>
+                                        <th scope="row">{item._id}</th>
+                                        <td>{item.userRoleValue}</td>
+                                        <td>{item.availableUsers.length}</td>
                                         <td>
-                                            <Link to={`/ShowUsersUnderRole/${item.value}`} className="btn form-control btn-outline-success btn-sm">Show Users</Link>
+                                            <Link to={`/ShowUsersUnderRole/${item._id}`} className="btn form-control btn-outline-success btn-sm">Show Users</Link>
                                         </td>
                                         <td>
-                                            <Link to={`/editUserRole/${item.value}`} className="btn form-control btn-outline-dark btn-sm">Edit User Role</Link>
+                                            <Link to={`/editUserRole/${item._id}`} className="btn form-control btn-outline-dark btn-sm">Edit User Role</Link>
                                         </td>
                                     </tr>
                                 )

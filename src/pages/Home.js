@@ -39,31 +39,7 @@ const Home = () => {
                         <tr>
                             <td>
                                 <Link to="/availableuserroles">
-                                    Manage Available User Roles
-                                </Link>
-                            </td>
-                            <td>Super Admin</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <Link to="/createUserRole">
-                                    ➡ Create User Role
-                                </Link>
-                            </td>
-                            <td>Super Admin</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <Link to="/editUserRole/Moderator">
-                                    ➡ Edit User Role - Moderator
-                                </Link>
-                            </td>
-                            <td>Super Admin</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <Link to="/ShowUsersUnderRole/Moderator">
-                                    ➡ Show Users Under Role - Moderator
+                                    Manage User Roles
                                 </Link>
                             </td>
                             <td>Super Admin</td>

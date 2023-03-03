@@ -1,3 +1,9 @@
+/* global google */
+
+// I think the google variable is already available when you 
+// import google map from script in html. This error caused by Eslint, 
+// you can try and add the below line to the top of your file to disable ESlint
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import FurtherDetails from "./FurtherDetails";
@@ -65,7 +71,6 @@ const GoogleLogin = () => {
 
     //render google login button
     useEffect(() => {
-        /* global google */
         google.accounts.id.initialize({
             client_id: "707797281139-4aqd3htq7bnut6nsp76ufc448svl64r9.apps.googleusercontent.com",
             callback: handleGoogle,

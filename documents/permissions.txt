@@ -1,0 +1,75 @@
+Only For Hired Employee
+	Attempt the final project assignment
+	View assigned Chapters
+	Attempt Quiz, View Reslut and  Review Page
+    Rate on Learning Materials
+    Raise Guidance Request Ticket
+Chapters
+    Create Chapter
+    Edit Chapter
+    Temporary Delete Chapter
+    Permanent Delete Chapter
+    Create common chapters
+    Viwe All Chapters
+    View Chapters From particular Department
+    Request for additional chapters
+    Give permissions to additional chapters
+    Assign default chapters to Job title
+    Edit default Chapters of each job title    
+Quizzes
+    Create Quizzes
+    Edit Quizzes
+    Delete Quizzes
+    view quiz review of employees - view submission grades
+Articles and KT Sessions
+    Create Learning Materials
+    View Created Learning Materials by that User
+    Edit Learning Materials
+    Delete Learning Materials
+    Upload Learning Materials
+    View Ratings on Learning Materials
+    Comment or Replying on Learning Materials
+    View Comments and Replies on Learning Materials
+Discussion Forums
+    View Discussion Forum Posts and Replies
+    Participate in discussion forum
+    Create Discussion Forum
+    Edit Discussion Forum
+    Lock Discussion Forum
+    Post or Reply on Discussion forum
+Final Project Assignment of Employees
+    Give Final Project Assignment
+    View Final Project Assignment Requests
+    Evaluate Final Project Assignment of Hired Employee - Sagini
+User Profile
+    View Leader Board
+	Check Profile Overview
+Guidance Request Tickets
+	Complete Guidance Request Tickets
+	Direct Guidance Request Ticket
+Authentication and Verification
+	Allow and Verify designations of the User
+	Promote Employee to Supervisor
+	Create User Roles
+	Edit User Roles
+	Delete User Roles
+	View User Roles
+Departments
+	Create Department
+	Edit Department
+	Delete Department
+	View Department
+Job Title
+	Create Job Title
+	Edit Job Title
+	Delete Job Title 
+	View Job Title
+
+
+reports
+    chapter reports - Supervisor, HE
+        details about hired emp - unit marks
+    overview report - Supervisor, HE
+        details about hired emp - chapter total marks
+    quiz report - 
+    rating report - content creator
