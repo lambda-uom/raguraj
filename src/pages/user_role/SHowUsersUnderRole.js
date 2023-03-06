@@ -1,7 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import NavBar from "../components/NavBar";
-import users from "../data/Users.json";
+import NavBar from "../../components/NavBar";
+
+import users from "../../data/Users.json";
 const ShowUsersUnderRole = () => {
     const { userRole } = useParams();
     return (

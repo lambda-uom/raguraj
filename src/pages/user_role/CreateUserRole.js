@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import NavBar from "../components/NavBar";
-import perimssions from "../data/renderPermissions.json"
+import perimssions from "../../data/renderPermissions.json"
 import axios from "axios";
 import swal from 'sweetalert'
+import NavBar from "../../components/NavBar";
 const CreateUserRole = () => {
     var permissionsArray = [];
     const [userRoleValue, setUserRoleValue] = useState();

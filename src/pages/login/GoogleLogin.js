@@ -9,8 +9,8 @@ import axios from "axios";
 import FurtherDetails from "./FurtherDetails";
 import jwt_decode from "jwt-decode";
 import { useLocation, useNavigate } from "react-router-dom";
-import image1 from "../images/employee.png"
-import image2 from "../images/employeegroup.webp"
+import image1 from "../../images/employee.png"
+import image2 from "../../images/employeegroup.webp"
 
 const GoogleLogin = () => {
     // purpose of this code is to navigate user to entered required URL before login

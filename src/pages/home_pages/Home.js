@@ -1,20 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import NavBar from "../components/NavBar";
-// import Darkmode from 'darkmode-js';
+import NavBar from "../../components/NavBar";
 const Home = () => {
-    // const options = {
-    //     mixColor: '#fff', // default: '#fff'
-    //     backgroundColor: '#fff',  // default: '#fff'
-    //     buttonColorDark: '#100f2c',  // default: '#100f2c'
-    //     buttonColorLight: '#fff', // default: '#fff'
-    //     saveInCookies: false, // default: true,
-    //     label: '🌓', // default: ''
-    //     autoMatchOsTheme: true // default: true
-    // }
-
-    // const darkmode = new Darkmode(options);
-    // darkmode.showWidget();
     return (
         <React.Fragment>
             <NavBar></NavBar>
@@ -64,14 +51,6 @@ const Home = () => {
                             <td>
                                 <Link to="/hiredemployee">
                                     Hired Employee Dashboard
-                                </Link>
-                            </td>
-                            <td>Hired Employee</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <Link to="/hiredemployee2">
-                                    Hired Employee Dashboard - Final Project assignment request
                                 </Link>
                             </td>
                             <td>Hired Employee</td>

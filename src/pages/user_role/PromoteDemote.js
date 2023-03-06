@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import NavBar from "../components/NavBar";
-import userroles from "../data/UserRoles.json";
-import users from "../data/Users.json";
+import NavBar from "../../components/NavBar";
+import userroles from "../../data/UserRoles.json";
+import users from "../../data/Users.json";
 const PromoteDemote = () => {
     const [selectedRole, setSelectedRole] = useState("");
     console.log(selectedRole);
@@ -9,7 +9,6 @@ const PromoteDemote = () => {
     return (
         <React.Fragment>
             <NavBar></NavBar>
-
             <div className="container mt-5">
                 <div className="alert alert-success"><h4>Promote or Demote User</h4></div>
                 <select className="form-control" onChange={(e) => setSelectedRole(e.target.value)}>

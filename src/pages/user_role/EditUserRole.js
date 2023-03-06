@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import NavBar from "../components/NavBar";
 import axios from "axios";
-import perimssions from "../data/renderPermissions.json"
+import perimssions from "../../data/renderPermissions.json"
 import swal from 'sweetalert'
+import NavBar from "../../components/NavBar";
 const EditUserRole = () => {
     const { userRole } = useParams();
 

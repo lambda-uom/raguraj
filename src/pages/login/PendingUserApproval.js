@@ -1,6 +1,6 @@
 import React from "react";
-import NavBar from "../components/NavBar";
-import users from "../data/Users.json";
+import NavBar from "../../components/NavBar";
+import users from "../../data/Users.json";
 const PendingUserApproval = () => {
     return (
         <React.Fragment>

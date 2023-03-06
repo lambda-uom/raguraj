@@ -1,16 +1,8 @@
 import React from "react";
 import Chapters from "../../data/Chapters.json"
-import NavBar from "../../components/NavBar";
 import { Link } from "react-router-dom";
-import swal from 'sweetalert'
-import "../../App.css"
-const HiredEmployee2 = () => {
-    const [reqButtText, setReqButtText] = React.useState("Request Final Project Assignment");
-    const reqproj = ()=>{
-        swal("Good job!", "Project Assignment Request sent to your Supervisor", "success");
-        setReqButtText("Requested | Project assignment in pending");
-        
-    }
+import NavBar from "../../components/NavBar";
+const HiredEmployee = () => {
     return (
         <React.Fragment>
             <NavBar></NavBar>
@@ -23,7 +15,7 @@ const HiredEmployee2 = () => {
                             <button className="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Guidance Ticket Request</button>
                         </div>
                     </nav>
-                    <div className="tab-content p-3 border" id="nav-tabContent">
+                    <div className="tab-content p-3 border bg-light" id="nav-tabContent">
                         <div className="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                             {
                                 Chapters.map((item) => {
@@ -32,10 +24,7 @@ const HiredEmployee2 = () => {
                                             ?
                                             (item.chapters).map((chapter) => {
                                                 return (
-                                                    <Link className="btn btn-outline-success form-control m-2">
-                                                        {chapter + "  "}
-                                                        <i className="bi bi-check-circle-fill"></i>
-                                                    </Link>
+                                                    <Link className="btn btn-outline-primary form-control m-2">{chapter}</Link>
                                                 )
                                             })
                                             :
@@ -43,9 +32,9 @@ const HiredEmployee2 = () => {
                                     )
                                 })
                             }
-                            <button className={(reqButtText==="Request Final Project Assignment")?"button btn border border-dark form-control m-2 btn-warning":"btn form-control m-2 btn-outline-warning"} onClick={reqproj}>
-                                {reqButtText}
-                            </button>
+                            <Link className="disabled btn btn-secondary form-control m-2">
+                                Request Final Project Assignment | Locked. Complete the chapters first
+                            </Link>
                         </div>
                         <div className="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                             {
@@ -87,4 +76,4 @@ const HiredEmployee2 = () => {
         </React.Fragment>
     );
 }
-export default HiredEmployee2;
+export default HiredEmployee;

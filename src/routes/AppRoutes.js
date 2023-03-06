@@ -7,16 +7,15 @@ import RequireAuth from '../utils/RequireAuth';
 import RedirectIfLoggedIn from '../utils/RedirectIfLoggedIn';
 
 // Page Imports
-import AvailableUserRoles from '../pages/AvailableUserRoles';
-import CreateUserRole from '../pages/CreateUserRole';
-import HiredEmployee from '../pages/Dashboard/HiredEmployee';
-import HiredEmployee2 from '../pages/Dashboard/HiredEmployee2';
-import EditUserRole from '../pages/EditUserRole';
-import GoogleLogin from '../pages/GoogleLogin';
-import Home from '../pages/Home';
-import PendingUserApproval from '../pages/PendingUserApproval';
-import PromoteDemote from '../pages/PromoteDemote';
-import ShowUsersUnderRole from '../pages/SHowUsersUnderRole';
+import AvailableUserRoles from '../pages/user_role/AvailableUserRoles';
+import CreateUserRole from '../pages/user_role/CreateUserRole';
+import HiredEmployee from '../pages/home_pages/HiredEmployee';
+import EditUserRole from '../pages/user_role/EditUserRole';
+import GoogleLogin from '../pages/login/GoogleLogin';
+import Home from '../pages/home_pages/Home';
+import PendingUserApproval from '../pages/login/PendingUserApproval';
+import PromoteDemote from '../pages/user_role/PromoteDemote';
+import ShowUsersUnderRole from '../pages/user_role/SHowUsersUnderRole';
 
 const AppRoutes = () => {
     return (
@@ -32,7 +31,6 @@ const AppRoutes = () => {
                 <Route exact path="/promoteDemoteUser/" element={<RequireAuth><PromoteDemote /></RequireAuth>} />
                 <Route exact path="/pendingrequests/" element={<RequireAuth><PendingUserApproval /></RequireAuth>} />
                 <Route exact path="/hiredemployee/" element={<RequireAuth><HiredEmployee /></RequireAuth>} />
-                <Route exact path="/hiredemployee2/" element={<RequireAuth><HiredEmployee2 /></RequireAuth>} />
             </Routes>
         </BrowserRouter>
     );
